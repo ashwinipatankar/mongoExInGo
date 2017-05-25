@@ -90,7 +90,7 @@ func allBooks(s *mgo.Session) func(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		respBody, err := json.MarshalIndent(books, ",", " ")
+		respBody, err := json.MarshalIndent(books, "", " ")
 		if err != nil {
 			log.Fatal(err)
 		}
